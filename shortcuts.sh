@@ -48,15 +48,19 @@ if [ ! -f "$output_file" ]; then
 fi
 
 # GENERATE KEYBINDINGS BACKUP
+# Original: ['<Super>Page_Up', '<Super><Alt>Left', '<Control><Alt>Left']
 keybindings=$(get_keybindings "switch-to-workspace-left")
 check_and_write "switch-to-workspace-left" "switch-to-workspace-left=$keybindings" "$output_file"
 
+# Original: ['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right']
 keybindings=$(get_keybindings "switch-to-workspace-right")
 check_and_write "switch-to-workspace-right" "switch-to-workspace-right=$keybindings" "$output_file"
-  
+
+# Original: ['<Control><Alt>Up']
 keybinding=$(get_keybindings "switch-to-workspace-up")
 check_and_write "switch-to-workspace-up" "switch-to-workspace-up=$keybindings" "$output_file"
 
+# Original: ['<Control><Alt>Down']
 keybinding=$(get_keybindings "switch-to-workspace-down")
 check_and_write "switch-to-workspace-down" "switch-to-workspace-down=$keybindings" "$output_file"
 
